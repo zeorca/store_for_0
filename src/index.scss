@@ -35,15 +35,19 @@ header {
   }
 }
 
-.button {
-  background: #ffffff;
-  border: 1px solid #f2f2f2;
-  border-radius: 8px;
-  box-sizing: border-box;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-}
+// .button {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background: #ffffff;
+//   border: 1px solid #f2f2f2;
+//   border-radius: 8px;
+//   box-sizing: border-box;
+//   width: 32px;
+//   height: 32px;
+//   cursor: pointer;
+//   padding: 0;
+// }
 
 .greenButton {
   width: 100%;
@@ -89,100 +93,43 @@ header {
   z-index: 1;
 }
 
-.drawer {
-  position: absolute;
-  width: 420px;
-  height: 100%;
-  right: 0;
-  background: #ffffff;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-
-  .items {
-    flex: 1;
-    overflow: auto;
+.cartTotalBlock {
+  ul {
+    list-style: none;
+    margin-bottom: 35px;
+    padding: 0;
   }
 
-  h2 {
-    margin: 0;
-    margin-bottom: 30px;
-  }
-
-  .cartTotalBlock {
-    ul {
-      list-style: none;
-      margin-bottom: 35px;
-      padding: 0;
-    }
-
-    li {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-
-    div {
-      flex: 1;
-      height: 1px;
-      border-bottom: 1px dashed #dfdfdf;
-      position: relative;
-      top: -4px;
-      margin: 0 7px;
-    }
-
-    .greenButton {
-      position: relative;
-      
-      &:hover {
-        img {
-          transform: translateX(5px);
-        }
-      }
-      
-      img {
-        transition: transform 0.2s ease-in-out;
-        position: absolute;
-        right: 30px;
-        top: 20px;
-      }
-    }
-  }
-
-  .cartItem {
-    padding: 19px;
-    border: 1px solid #f3f3f3;
-    border-radius: 20px;
-    overflow: hidden;
+  li {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     margin-bottom: 20px;
+  }
 
-    .cartItemImg {
-      height: 70px;
-      width: 70px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      margin-right: 20px;
-    }
+  div {
+    flex: 1;
+    height: 1px;
+    border-bottom: 1px dashed #dfdfdf;
+    position: relative;
+    top: -4px;
+    margin: 0 7px;
+  }
 
-    p {
-      margin: 0;
-      font-size: 14px;
-    }
-
-    b {
-      font-size: 14px;
-    }
-
-    .removeBtn {
-      opacity: 0.5;
-      cursor: pointer;
-      transition: opacity 150ms ease-in-out;
-
-      &:hover {
-        opacity: 1;
+  .greenButton {
+    position: relative;
+    
+    &:hover {
+      img {
+        transform: translateX(5px);
       }
+    }
+    
+    img {
+      transition: transform 0.2s ease-in-out;
+      position: absolute;
+      right: 30px;
+      top: 20px;
     }
   }
 }

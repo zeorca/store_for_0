@@ -1,36 +1,38 @@
-function Drawer() {
+import styles from './Drawer.module.scss';
+
+function Drawer(props) {
   return (
-    <div style={{ display: "none" }} className="overlay">
-      <div className="drawer">
+    <div className="overlay">
+      <div className={styles.drawer}>
         <h2 className="d-flex justify-between">
-          Корзина{" "}
-          <img className="removeBtn  cu-p" src="/img/remove.svg" alt="remove" />
+          Корзина
+          <img className={styles.removeBtn} src="/img/remove.svg" alt="remove" onClick={props.onClickCart}/>
         </h2>
 
-        <div className="items">
-          <div className="cartItem d-flex justify-between align-center">
+        <div className={styles.items}>
+          <div className={styles.cartItem}>
             <div
               style={{ backgroundImage: "url(/img/item2.jpg)" }}
-              className="cartItemImg"
+              className={styles.cartItemImg}
             ></div>
 
             <div className="mr-20 flex">
               <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
               <b>12 999 руб.</b>
             </div>
-            <img className="removeBtn" src="/img/remove.svg" alt="remove" />
+            <img className={styles.removeBtn} src="/img/remove.svg" alt="remove" />
           </div>
-          <div className="cartItem d-flex justify-between align-center">
+          <div className={styles.cartItem}>
             <div
               style={{ backgroundImage: "url(/img/item2.jpg)" }}
-              className="cartItemImg"
+              className={styles.cartItemImg}
             ></div>
 
             <div className="mr-20 flex">
               <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
               <b>12 999 руб.</b>
             </div>
-            <img className="removeBtn" src="/img/remove.svg" alt="remove" />
+            <img className={styles.removeBtn} src="/img/remove.svg" alt="remove" />
           </div>
         </div>
         <div className="cartTotalBlock">
